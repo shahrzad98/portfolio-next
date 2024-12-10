@@ -17,9 +17,6 @@ const BannerLeft = () => {
         This market is the premier marketplace for nifties, which are digital
         items you can truly own for yourself
       </p>
-      <a className="action-btn bg-purple500" href="/contact">
-        <span>Get Connected</span>
-      </a>
     </>
   );
 };
