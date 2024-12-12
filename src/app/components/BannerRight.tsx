@@ -1,7 +1,9 @@
 import { Avatar } from '@mantine/core';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const BannerRight = () => {
+  const { basePath } = useRouter();
   return (
     <div
       className="relative before:w-[600px]  before:absolute
@@ -14,7 +16,7 @@ const BannerRight = () => {
         className="contrast-125 rounded-[130px] before:w-[600px] before:z-10 before:absolute before:top-0
           before:right-0 before:h-[600px] before:-rotate-12 before:rounded-[130px] before:content-['']
            before:bg-lightGrey"
-        src="/banner.png"
+        src={`${basePath}/banner.png}`}
         alt="banner"
         width={600}
         height={700}
