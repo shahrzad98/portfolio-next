@@ -91,7 +91,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Set environment variables
-        env:
-        NEXT_PUBLIC_BASE_PATH: /portfolio-next
-        run: npm run build
