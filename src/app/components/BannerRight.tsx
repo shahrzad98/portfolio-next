@@ -1,9 +1,8 @@
 import { Avatar } from '@mantine/core';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 const BannerRight = () => {
-  const { basePath } = useRouter();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <div
       className="relative before:w-[600px]  before:absolute
