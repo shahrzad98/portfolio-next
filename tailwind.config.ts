@@ -2,11 +2,14 @@ import type { Config } from 'tailwindcss';
 
 export default {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '1280px',
+    },
     extend: {
       fontFamily: {
         conthrax: ['Conthrax', 'sans-serif'],
@@ -17,6 +20,7 @@ export default {
       white: '#FFFFFF',
       black: '#000000',
       lightGrey: '#D6D7DC',
+      darkGrey: '#5e5e60',
       purple900: '#070A29',
       purple800: '#181645',
       purple700: '#231F58',
