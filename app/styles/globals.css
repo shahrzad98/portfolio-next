@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Conthrax';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(/fonts/Conthrax-SemiBold.otf) format('opentype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --primary-900: theme('colors.purple900');
+    --primary-700: theme('colors.purple700');
+
+}
+
+body {
+    background: linear-gradient(to right, var(--primary-900) 0%, var(--primary-700) 100%);
+}
+
+.bg-main-to-transparent {
+    background-image: linear-gradient(to top, transparent, rgba(196, 196, 215, 0.1));
+}
+
+.bg-light-to-transparent {
+    background-image: linear-gradient(to right, transparent, transparent, rgba(242, 242, 248, 0.2), rgba(242, 242, 248, 0.2), rgba(242, 242, 248, 0.2), rgba(242, 242, 248, 0.2));
+}
+
+.bg-gradient-circle {
+    background-image: radial-gradient(circle, #2E286A, #2E286A, transparent, transparent);
+
+}
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes downUp {
+    0%, 100% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes leftRight {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+@keyframes leftRightMember {
+    0% {
+        transform: translateX(-200px);
+    }
+}
+
+.animate-left-right-member {
+    animation: leftRightMember 1s ease-in-out infinite ;
+}
+.animate-up-down {
+    animation: upDown 4s ease-in-out infinite;
+}
+
+.animate-up-down-slow {
+    animation: upDown 6s ease-in-out infinite;
+}
+
+.animate-down-up {
+    animation: downUp 3s ease-in-out infinite;
+}
+
+.animate-down-up-slow {
+    animation: downUp 6s ease-in-out infinite;
+}
+
+.animate-left-right {
+    animation: leftRight 3s ease-in-out infinite;
+}
+
+
+
+.animate-left-right-slow {
+    animation: leftRight 6s ease-in-out infinite;
+}
+
+
+.loading-flip {
+    animation: loading 1s linear;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-50%) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotateY(180deg);
+    }
+    75% {
+        transform: translateX(-50%) rotateY(360deg);
+    }
+    100% {
+        transform: translateX(-50%) rotateY(360deg);
+    }
+}
+
+.container-with-dots .react-multi-carousel-item {
+    margin-right: 0 !important;
+    width: auto !important;
+}

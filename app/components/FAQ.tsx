@@ -22,7 +22,7 @@ const FAQ = () => {
     return () => observer.disconnect();
   }, []);
 
-  const [scrollDirection, setScrollDirection] = useState(null);
+  const [scrollDirection, setScrollDirection] = useState<string | null>(null);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
