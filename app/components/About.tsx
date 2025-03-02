@@ -18,6 +18,7 @@ const AboutUs = () => {
             src={`${basePath}/about2.png`}
             alt="banner"
             width={500}
+            loading="lazy"
             height={500}
           />
           <Image
@@ -25,6 +26,7 @@ const AboutUs = () => {
             src={`${basePath}/about5.png`}
             alt="banner"
             width={200}
+            loading="lazy"
             height={200}
           />
           <Image
@@ -32,6 +34,7 @@ const AboutUs = () => {
             src={`${basePath}/about3.png`}
             alt="banner"
             width={200}
+            loading="lazy"
             height={200}
           />
           <Image
@@ -39,6 +42,7 @@ const AboutUs = () => {
             src={`${basePath}/about.png`}
             alt="banner"
             width={150}
+            loading="lazy"
             height={150}
           />
           {!isMobile && (
@@ -46,15 +50,16 @@ const AboutUs = () => {
               className="contrast-125 rounded-[20px] h-[80px] w-[80px] absolute -bottom-[150px] left-[200px] animate-down-up-slow  object-cover"
               src={`${basePath}/about4.png`}
               alt="banner"
+              loading="lazy"
               width={150}
               height={150}
             />
           )}
         </div>
       </div>
-      <div className="sm:col-span-6 col-span-12 sm:text-left text-center">
+      <div className="sm:col-span-6 col-span-12 sm:text-right text-center">
         <div className="sm:text-[60px] mb-4 text-[40px] font-conthrax text-white ">
-          <h1 className="inline ">Collect Generation</h1>
+          <h2 className="inline ">Collect Generation</h2>
         </div>
 
         <p className="sm:w-2/3 text-lightGrey">

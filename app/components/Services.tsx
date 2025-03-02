@@ -21,11 +21,11 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="text-white place-items-center text-left relative mb-24 p-6">
+    <div className="text-white place-items-center text-right relative mb-24 p-6">
       <div className="bg-gradient-circle sm:w-[1000px] h-[1000px] absolute -left-[500px] -top-[300px] rounded-full -z-10" />
-      <h1 className=" text-[50px] font-conthrax sm:w-[700px] text-center">
+      <h2 className=" text-[50px] font-conthrax sm:w-[700px] text-center">
         Become a Cyfonii Player Now
-      </h1>
+      </h2>
       <div className="flex sm:flex-row flex-col-reverse">
         <div className="sm:mr-20 mt-20">
           {Array.from({ length: 4 }).map((_, i) => (
@@ -37,6 +37,7 @@ const Services = () => {
                 className="mr-4 self-start"
                 src="/icon/icon-2.svg"
                 alt="icon"
+                loading="lazy"
                 width={50}
                 height={50}
               />
@@ -60,6 +61,7 @@ const Services = () => {
             className={`animate-left-right-slow transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             src="/portfolio.png"
             width={700}
+            loading="lazy"
             height={700}
             alt="portfolio"
           />

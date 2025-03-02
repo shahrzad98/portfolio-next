@@ -8,9 +8,9 @@ const Speciality = () => {
   return (
     <div className="text-white mb-[200px] p-12 text-center">
       <div className="mb-[180px]">
-        <h1 className="sm:text-[60px] text-[40px] font-conthrax  ">
+        <h2 className="sm:text-[60px] text-[40px] font-conthrax  ">
           Complete Solutions for your NFT
-        </h1>
+        </h2>
         <p>
           Cyfonii is the premier marketplace for nifties, which are digital
           items you can truly own for yourself
@@ -33,13 +33,19 @@ const Speciality = () => {
            absolute -top-[90px] left-1/2  transform -translate-x-1/2 ${isHovered ? 'loading-flip' : ''}`}
               >
                 <div className="rounded-full flex justify-center items-center w-[80px] h-[80px] ">
-                  <Image src="/logo1.png" alt="logo" width={80} height={80} />
+                  <Image
+                    loading="lazy"
+                    src="/logo1.png"
+                    alt="logo"
+                    width={80}
+                    height={80}
+                  />
                 </div>
               </div>
               <div className="text-center w-full">
-                <h1 className="mb-3 text-2xl font-conthrax  text-center ">
+                <h2 className="mb-3 text-2xl font-conthrax  text-center ">
                   Huge Collection
-                </h1>
+                </h2>
                 <p>
                   Oficia dese runt mollit anim id est labo met, consectetur
                   adipis

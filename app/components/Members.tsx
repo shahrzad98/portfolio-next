@@ -75,6 +75,7 @@ const Members = () => {
               <Image
                 src="/member2.png"
                 alt="member"
+                loading="lazy"
                 fill
                 className="object-cover rounded-2xl"
               />

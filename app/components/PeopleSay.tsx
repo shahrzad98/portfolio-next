@@ -10,6 +10,7 @@ const PeopleSay = () => {
         <Image
           className="mb-10"
           src="/quote.png"
+          loading="lazy"
           alt="about"
           width={100}
           height={100}
@@ -24,6 +25,7 @@ const PeopleSay = () => {
         <div className=" h-[80px] w-[80px] relative mb-4">
           <Image
             className="rounded-full object-cover"
+            loading="lazy"
             src="/avatar1.png"
             alt="about"
             fill
