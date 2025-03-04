@@ -1,14 +1,15 @@
 'use client';
 import React from 'react';
-import { Button, Menu } from '@mantine/core';
-import { Search, ChevronDown } from 'lucide-react';
+import { Button } from '@mantine/core';
+import { Search } from 'lucide-react';
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <header className="bg-[#0f0f2f] p-4">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="text-white font-conthrax text-xl">
+        <div className="text-white  text-xl">
           <span>3D</span>
           <span>WEB</span>
         </div>
@@ -16,46 +17,20 @@ const Header = () => {
         {/* Navigation */}
         <nav className="flex items-center space-x-6">
           {/* Menu with Dropdown */}
-          <Menu withArrow shadow="md" width={200}>
-            <Menu.Target>
-              <button className="text-white hover:text-purple-400 flex items-center space-x-1">
-                <span>Home</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            </Menu.Target>
-            <Menu.Dropdown>
-              <Menu.Item>Option 1</Menu.Item>
-              <Menu.Item>Option 2</Menu.Item>
-              <Menu.Item>Option 3</Menu.Item>
-            </Menu.Dropdown>
-          </Menu>
+          <button className="text-white hover:text-purple-400 flex items-center space-x-1 mx-2">
+            <span>خانه</span>
+          </button>
 
-          <Menu withArrow shadow="md" width={200}>
-            <Menu.Target>
-              <button className="text-white hover:text-purple-400 flex items-center space-x-1">
-                <span>Explore</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            </Menu.Target>
-            <Menu.Dropdown>
-              <Menu.Item>Explore Option 1</Menu.Item>
-              <Menu.Item>Explore Option 2</Menu.Item>
-              <Menu.Item>Explore Option 3</Menu.Item>
-            </Menu.Dropdown>
-          </Menu>
+          <Link href="#about" className="text-white hover:text-purple-400">
+            درباره ما
+          </Link>
 
-          <a href="#about" className="text-white hover:text-purple-400">
-            About
-          </a>
-          <a href="#roadmap" className="text-purple-500 hover:text-purple-400">
-            RoadMap
-          </a>
-          <a href="#team" className="text-white hover:text-purple-400">
-            Team
-          </a>
-          <a href="#contact" className="text-white hover:text-purple-400">
-            Contact
-          </a>
+          <Link href="#team" className="text-white hover:text-purple-400">
+            متخصصین
+          </Link>
+          <Link href="#contact" className="text-white hover:text-purple-400">
+            تماس
+          </Link>
         </nav>
 
         {/* Actions */}

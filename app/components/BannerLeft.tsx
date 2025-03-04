@@ -20,7 +20,7 @@ const BannerLeft = () => {
         )}
         <Image
           className="contrast-125 sm:rounded-[130px] rounded-[50px] "
-          src={`${basePath}/banner.png`}
+          src={`${basePath}/assets/banner.png`}
           alt="banner"
           width={600}
           height={700}
@@ -28,17 +28,17 @@ const BannerLeft = () => {
         />
       </div>
       <div className="flex shadow-2xl items-center animate-up-down bg-white p-3 sm:w-[250px] rounded-2xl absolute top-3/4 sm:-left-24">
-        <Avatar src="/avatar.png" />
+        <Avatar src="/assets/avatar.png" />
         <div className="ml-3">
-          <p className="font-conthrax">Shahrzad Gheidi</p>
+          <p className="">Shahrzad Gheidi</p>
           <p className="text-sm">@shahrzad98</p>
         </div>
       </div>
       <div className="flex shadow-2xl items-center animate-left-right bg-white p-3 w-[180px] rounded-2xl absolute top-1/4 sm:left-[500px] left-1/2">
-        <Avatar src="/logo1.png" />
+        <Avatar src="/assets/logo1.png" />
         <div className="ml-3">
           <p className="text-sm">Current Bid</p>
-          <p className="font-conthrax">2.26 ETH</p>
+          <p className="">2.26 ETH</p>
         </div>
       </div>
     </div>

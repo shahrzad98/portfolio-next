@@ -15,7 +15,7 @@ const AboutUs = () => {
         >
           <Image
             className="contrast-125 rounded-[90px] z-10"
-            src={`${basePath}/about2.png`}
+            src={`${basePath}/assets/about2.png`}
             alt="banner"
             width={500}
             loading="lazy"
@@ -23,7 +23,7 @@ const AboutUs = () => {
           />
           <Image
             className="h-[250px] sm:w-[250px] contrast-125 rounded-[60px] absolute -bottom-[150px] sm:-right-[100px] -right-[10px] animate-left-right object-cover"
-            src={`${basePath}/about5.png`}
+            src={`${basePath}/assets/about5.png`}
             alt="banner"
             width={200}
             loading="lazy"
@@ -31,7 +31,7 @@ const AboutUs = () => {
           />
           <Image
             className="contrast-125 rounded-[60px] h-[250px] w-[250px] absolute -bottom-[100px] -left-[100px] animate-up-down object-cover -z-10"
-            src={`${basePath}/about3.png`}
+            src={`${basePath}/assets/about3.png`}
             alt="banner"
             width={200}
             loading="lazy"
@@ -39,7 +39,7 @@ const AboutUs = () => {
           />
           <Image
             className="contrast-125 rounded-[30px] h-[150px] w-[150px] absolute top-[150px] -left-[200px] animate-down-up object-cover"
-            src={`${basePath}/about.png`}
+            src={`${basePath}/assets/about.png`}
             alt="banner"
             width={150}
             loading="lazy"
@@ -48,7 +48,7 @@ const AboutUs = () => {
           {!isMobile && (
             <Image
               className="contrast-125 rounded-[20px] h-[80px] w-[80px] absolute -bottom-[150px] left-[200px] animate-down-up-slow  object-cover"
-              src={`${basePath}/about4.png`}
+              src={`${basePath}/assets/about4.png`}
               alt="banner"
               loading="lazy"
               width={150}
@@ -58,21 +58,28 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="sm:col-span-6 col-span-12 sm:text-right text-center">
-        <div className="sm:text-[60px] mb-4 text-[40px] font-conthrax text-white ">
-          <h2 className="inline ">Collect Generation</h2>
+        <div className="sm:text-[60px] mb-4 text-[40px]  text-white ">
+          <h2 className="inline ">نسل جدید وب</h2>
         </div>
 
-        <p className="sm:w-2/3 text-lightGrey">
-          This market is the premier marketplace for nifties, which are digital
+        <p className="sm:w-2/3 text-lightGrey text-2xl">
+          ما تجربه کاربری را متحول می‌کنیم! در 3DWEB خدماتی ارائه می‌دهیم که
+          سایت شما را به سطح جدیدی ارتقا می دهد:
         </p>
         <p className="mt-6 sm:w-2/3 text-lightGrey">
-          This market is the premier marketplace for nifties, which are digital
-          items you can truly own for yourself This market is the premier
-          marketplace for nifties, which are digital items you can truly own for
+          طراحی سایت سه‌بعدی (3D Web Design) – تجربه‌ای بصری و پویا با
+          گرافیک‌های سه‌بعدی مدرن
         </p>
-        <p className="sm:w-2/3  text-lightGrey">
-          This market is the premier marketplace for nifties, which are digital
-          items you can truly own for yourself
+        <p className="mt-6 sm:w-2/3 text-lightGrey">
+          طراحی سایت بلاک‌چینی و کریپتو – مناسب برای صرافی‌های ارز دیجیتال، NFT
+          و پلتفرم‌های DeFi
+        </p>
+        <p className="mt-6 sm:w-2/3 text-lightGrey">
+          هوش مصنوعی در طراحی سایت – خودکارسازی فرآیندها و ارائه تجربه کاربری
+          هوشمند
+        </p>
+        <p className="mt-6 sm:w-2/3 text-lightGrey">
+          با ما همراه شوید و سایتی بسازید که از رقبا متمایز باشد!
         </p>
       </div>
     </div>

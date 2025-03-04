@@ -4,24 +4,48 @@ import { useState } from 'react';
 
 const Speciality = () => {
   const [isHovered, setIsHovered] = useState(false);
-
+  const expertise = [
+    {
+      id: 1,
+      title: 'سایت 3 بعدی',
+      description: 'ایجاد تجربه‌ای جذاب و تعاملی با WebGL و Three.js',
+      number: '01',
+    },
+    {
+      id: 2,
+      title: 'صرافی کریپتو',
+      description:
+        'پلتفرم‌های خرید و فروش ارز دیجیتال مبتنی بر بلاکچین، کیف پول‌های رمزنگاری شده و NFT ',
+      number: '02',
+    },
+    {
+      id: 3,
+      title: 'فروشگاه',
+      description:
+        'ایجاد برندی معتبر در راستای افزایش فروش آنلاین و دیجیتال مارکتینگ هوشمند',
+      number: '03',
+    },
+    {
+      id: 4,
+      title: 'هوش مصنوعی',
+      description:
+        'پلتفرم‌های مبتنی بر هوش مصنوعی، آنالیز دیتا، تصویر، فروش هوشمند و شخصی سازی کاربر',
+      number: '04',
+    },
+  ];
   return (
     <div className="text-white mb-[200px] p-12 text-center">
       <div className="mb-[180px]">
-        <h2 className="sm:text-[60px] text-[40px] font-conthrax  ">
-          Complete Solutions for your NFT
-        </h2>
-        <p>
-          Cyfonii is the premier marketplace for nifties, which are digital
-          items you can truly own for yourself
+        <h2 className="sm:text-[60px] text-[40px]">حوزه‌های تخصصی در 3D WEB</h2>
+        <p className="text-lg">
+          3DWEB is the premier marketplace for websites, digital assets and
+          items you can truly own
         </p>
       </div>
-      <div className="flex justify-center sm:flex-row flex-col items-center">
-        {Array.from({ length: 4 })
-          .fill(0)
-          .map((_, i) => (
+      <div className="grid grid-cols-12">
+        {expertise.map((item) => (
+          <div className="col-span-12 sm:col-span-3" key={item.id}>
             <div
-              key={i}
               onMouseEnter={() => {
                 setIsHovered(true);
                 setTimeout(() => setIsHovered(false), 1000);
@@ -35,7 +59,7 @@ const Speciality = () => {
                 <div className="rounded-full flex justify-center items-center w-[80px] h-[80px] ">
                   <Image
                     loading="lazy"
-                    src="/logo1.png"
+                    src="/assets/logo1.png"
                     alt="logo"
                     width={80}
                     height={80}
@@ -43,19 +67,17 @@ const Speciality = () => {
                 </div>
               </div>
               <div className="text-center w-full">
-                <h2 className="mb-3 text-2xl font-conthrax  text-center ">
-                  Huge Collection
+                <h2 className="mb-3 text-[35px]   text-center ">
+                  {item.title}
                 </h2>
-                <p>
-                  Oficia dese runt mollit anim id est labo met, consectetur
-                  adipis
-                </p>
-                <h3 className="font-conthrax text-[60px] opacity-10 group-hover:opacity-100 transition-opacity duration-300">
-                  01
+                <p>{item.description}</p>
+                <h3 className=" text-[60px] opacity-10 group-hover:opacity-100 transition-opacity duration-300">
+                  {item.number}
                 </h3>
               </div>
             </div>
-          ))}
+          </div>
+        ))}
       </div>
     </div>
   );

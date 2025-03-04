@@ -13,6 +13,7 @@ export default {
     extend: {
       fontFamily: {
         gandom: ['Gandom', 'sans-serif'],
+        conthrax: ['Conthrax', 'sans-serif'],
       },
     },
     colors: {

@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 
 const FAQ = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,12 +52,11 @@ const FAQ = () => {
        ${scrollDirection == 'down' && isVisible ? 'translate-y-10 opacity-100' : '-translate-y-10 opacity-0'}
         `}
     >
-      <h2 ref={ref} className="text-[30px] sm:text-[60px] font-conthrax">
-        Frequently Aksed Questions
+      <h2 ref={ref} className="text-[30px] sm:text-[60px] ">
+        سوالات متداول
       </h2>
-      <p>
+      <p className="text-[30px]">
         Below is a list of frequently asked questions and answers from partners
-        and 3D artist Please check this FAQ first before contacting us.
       </p>
     </div>
   );

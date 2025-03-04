@@ -7,7 +7,6 @@ import Services from '@/components/Services';
 import Members from '@/components/Members';
 import FAQ from '@/components/FAQ';
 import PeopleSay from '@/components/PeopleSay';
-import { Button } from '@mantine/core';
 
 export const metadata = {
   title: 'طراحی سایت | خدمات سایت حرفه‌ای',
@@ -34,7 +33,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <div className="grid grid-cols-12 sm:gap-x-20 sm:px-12 px-4 place-items-center mt-12 mb-[200px]">
+      <div className="grid grid-cols-12 sm:gap-x-20 sm:px-12 px-4 place-items-center mt-12 mb-[200px] ">
         <div className="col-span-12 sm:col-span-6 sm:mb-0 mb-20 sm:text-right text-center ">
           <BannerRight />
         </div>
@@ -42,14 +41,16 @@ export default function Home() {
           <BannerLeft />
         </div>
       </div>
-      <AboutUs />
-      <Speciality />
-      <div className="bg-[url(/bg-svg.png)]">
-        <Services />
-        <Members />
+      <div className="overflow-x-hidden">
+        <AboutUs />
+        <Speciality />
+        <div className="bg-[url(/bg-svg.png)]">
+          <Services />
+          <Members />
+        </div>
+        <FAQ />
+        <PeopleSay />
       </div>
-      <FAQ />
-      <PeopleSay />
     </>
   );
 }

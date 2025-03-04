@@ -29,9 +29,12 @@ const Members = () => {
   };
   if (!isClient) return null;
   return (
-    <div className="text-white place-items-center text-center mb-32 p-6">
-      <h2 className="font-conthrax text-[40px] sm:text-[60px] max-w-[800px] mb-6">
-        Our Amazing Team Members
+    <div
+      id="team"
+      className="text-white place-items-center text-center mb-32 p-6"
+    >
+      <h2 className=" text-[40px] sm:text-[60px] max-w-[800px] mb-6">
+        3D WEB Experts
       </h2>
       <Carousel
         arrows={false}
@@ -73,7 +76,7 @@ const Members = () => {
             />
             <div className=" relative w-[200px] h-[200px]">
               <Image
-                src="/member2.png"
+                src="/assets/member2.png"
                 alt="member"
                 loading="lazy"
                 fill
