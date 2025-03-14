@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Change to your deployment branch if different
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Build Next.js app
-        run: npm run build && npm run deploy
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
