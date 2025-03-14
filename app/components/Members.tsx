@@ -51,6 +51,7 @@ const Members = () => {
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
+
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
