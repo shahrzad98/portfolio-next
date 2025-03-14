@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Necessary for static export to work with Next.js
   },
+  output: 'export', // Enables static site export
+  trailingSlash: true, // Ensures correct routing
 };
 
 export default nextConfig;
