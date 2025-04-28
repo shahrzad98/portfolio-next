@@ -27,4 +27,4 @@ jobs:
           git config --global user.email "shahrzad.gheidi@gmail.com"
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d out -b gh-pages -r https://${{ secrets.GH_TOKEN }}@github.com/shahrzad98/portfolio-next.git
+        run: npx gh-pages --dist out --branch gh-pages --repo https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/shahrzad98/portfolio-next.git
