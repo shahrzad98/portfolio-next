@@ -2,29 +2,27 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # Step 2: Install Dependencies
-      - name: Install Dependencies
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
         run: npm install
 
-      # Step 3: Build the Project
-      - name: Build Project
+      - name: Build project
         run: npm run build
 
-      # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
           git config --global user.name "shahrzad98"
           git config --global user.email "shahrzad.gheidi@gmail.com"
-          npx gh-pages -d out -b gh-pages -r https://${{ secrets.GH_TOKEN }}@github.com/shahrzad98/portfolio-next.git
+          npx gh-pages -d out -b gh-pages -r https://${{ secrets.SSH_PRIVATE_KEY }}@github.com/shahrzad98/portfolio-next.git
