@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out -r https://${GH_TOKEN}@github.com/shahrzad98/portfolio-next.git",
+    "deploy": "gh-pages -d out -r git@github.com:shahrzad98/portfolio-next.git",
     "build-and-deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
