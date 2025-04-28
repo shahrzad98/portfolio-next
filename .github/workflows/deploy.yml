@@ -21,8 +21,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Configure Git
         run: |
           git config --global user.name "shahrzad98"
           git config --global user.email "shahrzad.gheidi@gmail.com"
-          npx gh-pages -d out -b gh-pages -r https://${{ secrets.GH_TOKEN }}@github.com/shahrzad98/portfolio-next.git
+
+      - name: Deploy to GitHub Pages
+        run: npx gh-pages -d out -b gh-pages -r https://${{ secrets.GITHUB_TOKEN }}@github.com/shahrzad98/portfolio-next.git
