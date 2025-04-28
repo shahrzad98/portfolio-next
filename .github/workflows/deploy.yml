@@ -27,4 +27,4 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          npx gh-pages -d out -b gh-pages -r https://${{ secrets.GH_PAT }}@github.com/shahrzad98/portfolio-next.git
+          npx gh-pages -d out -b gh-pages -r https://${{ secrets.GH_TOKEN }}@github.com/shahrzad98/portfolio-next.git
