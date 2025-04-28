@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
     "deploy": "gh-pages -d out",
-    "build-and-deploy": "npm run build && npm run export && npm run deploy"
+    "build-and-deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
     "@mantine/core": "^7.16.2",
