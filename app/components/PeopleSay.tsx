@@ -3,9 +3,14 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 const responsive = {
-  mobile: {
-    breakpoint: { max: 3000, min: 0 },
-    items: 1,
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 768 },
+    items: 1, // or however many you want on large screens
+  },
+
+  tablet: {
+    breakpoint: { max: 768, min: 0 },
+    items: 1, // for small tablets
   },
 };
 const Carousel = dynamic(() => import('react-multi-carousel'), { ssr: false });
@@ -43,42 +48,6 @@ const PeopleSay = () => {
   ];
   return (
     <>
-      {/*<Carousel*/}
-      {/*  responsive={{*/}
-      {/*    desktop: {*/}
-      {/*      breakpoint: {*/}
-      {/*        max: 3000,*/}
-      {/*        min: 1024,*/}
-      {/*      },*/}
-      {/*      items: 3,*/}
-      {/*      partialVisibilityGutter: 40,*/}
-      {/*    },*/}
-      {/*    mobile: {*/}
-      {/*      breakpoint: {*/}
-      {/*        max: 464,*/}
-      {/*        min: 0,*/}
-      {/*      },*/}
-      {/*      items: 1,*/}
-      {/*      partialVisibilityGutter: 30,*/}
-      {/*    },*/}
-      {/*    tablet: {*/}
-      {/*      breakpoint: {*/}
-      {/*        max: 1024,*/}
-      {/*        min: 464,*/}
-      {/*      },*/}
-      {/*      items: 2,*/}
-      {/*      partialVisibilityGutter: 30,*/}
-      {/*    },*/}
-      {/*  }}*/}
-      {/*  slidesToSlide={1}*/}
-      {/*  swipeable*/}
-      {/*>*/}
-      {/*  {[1, 2, 3].map((w) => (*/}
-      {/*    <div key={w} className="bg-purple900 w-20 h-20 text-white w-full">*/}
-      {/*      {w}*/}
-      {/*    </div>*/}
-      {/*  ))}*/}
-      {/*</Carousel>*/}
       <div className="p-4 w-full place-items-center" id="contact">
         <div className="bg-main-to-transparent text-white text-center place-items-center sm:mx-52 mx-0 sm:p-32 rounded-2xl relative">
           <h3 className=" text-[40px] sm:text-[60px]">What People Say</h3>
@@ -87,7 +56,7 @@ const PeopleSay = () => {
             arrows={false}
             infinite
             centerMode={false}
-            className="h-full w-full sm:max-w-[1050px] "
+            className="h-full w-screen sm:max-w-[1050px] "
             containerClass="transform-none"
             responsive={responsive}
             swipeable
@@ -99,7 +68,7 @@ const PeopleSay = () => {
                 key={item.id}
               >
                 <Image
-                  className="mb-10"
+                  className="mb-10 h-auto w-auto"
                   src="/assets/quote.png"
                   loading="lazy"
                   alt="about"
@@ -110,7 +79,7 @@ const PeopleSay = () => {
                 <p className="sm:max-w-[800px] mb-10">{item.answer}</p>
                 <div className=" h-[80px] w-[80px] relative mb-4">
                   <Image
-                    className="rounded-full object-cover"
+                    className="rounded-full object-cover h-auto w-auto"
                     loading="lazy"
                     src="/assets/avatar1.png"
                     alt="about"

@@ -63,6 +63,7 @@ const Speciality = () => {
                     alt="logo"
                     width={80}
                     height={80}
+                    className="h-auto w-auto"
                   />
                 </div>
               </div>

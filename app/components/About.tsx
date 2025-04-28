@@ -14,7 +14,7 @@ const AboutUs = () => {
            after:bg-lightGrey after:-top-2"
         >
           <Image
-            className="contrast-125 rounded-[90px] z-10"
+            className="contrast-125 rounded-[90px] z-10 w-auto h-auto"
             src={`${basePath}/assets/about2.png`}
             alt="banner"
             width={500}
@@ -22,7 +22,7 @@ const AboutUs = () => {
             height={500}
           />
           <Image
-            className="h-[250px] sm:w-[250px] contrast-125 rounded-[60px] absolute -bottom-[150px] sm:-right-[100px] -right-[10px] animate-left-right object-cover"
+            className=" h-[250px] sm:w-[250px] contrast-125 rounded-[60px] absolute -bottom-[150px] sm:-right-[100px] -right-[10px] animate-left-right object-cover"
             src={`${basePath}/assets/about5.png`}
             alt="banner"
             width={200}
@@ -30,15 +30,16 @@ const AboutUs = () => {
             height={200}
           />
           <Image
-            className="contrast-125 rounded-[60px] h-[250px] w-[250px] absolute -bottom-[100px] -left-[100px] animate-up-down object-cover -z-10"
+            className="contrast-125  rounded-[60px] h-[250px] w-[250px] absolute -bottom-[100px] -left-[170px] animate-up-down object-cover -z-10"
             src={`${basePath}/assets/about3.png`}
             alt="banner"
             width={200}
             loading="lazy"
             height={200}
           />
+
           <Image
-            className="contrast-125 rounded-[30px] h-[150px] w-[150px] absolute top-[150px] -left-[200px] animate-down-up object-cover"
+            className="contrast-125  rounded-[30px] h-[150px] w-[150px] absolute top-[150px] -left-[100px] animate-down-up object-cover"
             src={`${basePath}/assets/about.png`}
             alt="banner"
             width={150}
@@ -47,7 +48,7 @@ const AboutUs = () => {
           />
           {!isMobile && (
             <Image
-              className="contrast-125 rounded-[20px] h-[80px] w-[80px] absolute -bottom-[150px] left-[200px] animate-down-up-slow  object-cover"
+              className="contrast-125 rounded-[20px]  h-[80px] w-[80px] absolute -bottom-[150px] left-[200px] animate-down-up-slow  object-cover"
               src={`${basePath}/assets/about4.png`}
               alt="banner"
               loading="lazy"

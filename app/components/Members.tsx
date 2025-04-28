@@ -51,7 +51,6 @@ const Members = () => {
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
-
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
@@ -81,7 +80,7 @@ const Members = () => {
                 alt="member"
                 loading="lazy"
                 fill
-                className="object-cover rounded-2xl"
+                className="object-cover rounded-2xl h-auto w-auto"
               />
             </div>
           </div>

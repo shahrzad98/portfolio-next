@@ -3,8 +3,11 @@ import React from 'react';
 import { Button } from '@mantine/core';
 import { Search } from 'lucide-react';
 import Link from 'next/link';
+import { useBreakpoint } from '@/hooks/useBreakPoint';
 
 const Header = () => {
+  const { isMobile } = useBreakpoint();
+  if (isMobile) return;
   return (
     <header className="bg-[#0f0f2f] p-4">
       <div className="container mx-auto flex items-center justify-between">

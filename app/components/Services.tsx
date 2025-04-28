@@ -58,7 +58,7 @@ const Services = () => {
         <div className="h-auto w-auto">
           <Image
             ref={ref}
-            className={`animate-left-right-slow transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`h-auto w-auto animate-left-right-slow transition-opacity duration-500 h-auto w-auto ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             src="/assets/portfolio.png"
             width={700}
             loading="lazy"
@@ -73,7 +73,7 @@ const Services = () => {
               className="flex bg-main-to-transparent py-10 px-6 mb-6 rounded-2xl"
             >
               <Image
-                className="ml-4 self-start"
+                className="ml-4 self-start h-auto w-auto"
                 src={item.icon}
                 alt="icon"
                 loading="lazy"

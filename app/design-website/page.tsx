@@ -44,7 +44,7 @@ export default function Home() {
       <div className="overflow-x-hidden">
         <AboutUs />
         <Speciality />
-        <div className="bg-[url(/bg-svg.png)]">
+        <div className="bg-[url(/assets/bg-svg.png)]">
           <Services />
           <Members />
         </div>

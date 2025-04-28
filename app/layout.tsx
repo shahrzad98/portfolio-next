@@ -1,4 +1,6 @@
-import { ReactNode } from 'react';
+'use client';
+
+import { ReactNode, useEffect } from 'react';
 import {
   ColorSchemeScript,
   createTheme,
@@ -10,6 +12,7 @@ import 'react-multi-carousel/lib/styles.css';
 import '@/styles/globals.css';
 import Head from 'next/head';
 import Header from '@/components/Header';
+import { useRouter } from 'next/navigation';
 
 const theme = createTheme({});
 export default function RootLayout({
@@ -17,6 +20,11 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/design-website'); // or router.replace()
+  }, [router]);
+
   return (
     <html lang="en" dir="rtl" {...mantineHtmlProps}>
       <Head>
