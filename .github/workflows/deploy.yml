@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,19 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Setup SSH Key
-        uses: webfactory/ssh-agent@v0.6.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
+      # Step 2: Install Dependencies
       - name: Install Dependencies
         run: npm install
 
+      # Step 3: Build the Project
       - name: Build Project
         run: npm run build
 
+      # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
-          npx gh-pages -d out -r git@github.com:shahrzad98/portfolio-next.git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npx gh-pages -d out -b gh-pages -r https://${{ secrets.GH_TOKEN }}@github.com/shahrzad98/portfolio-next.git
