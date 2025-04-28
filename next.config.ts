@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Necessary for static export to work with Next.js
   },
   output: 'export', // Enables static site export
+  distDir: 'out', // Output directory
   trailingSlash: true, // Ensures correct routing
 };
 
