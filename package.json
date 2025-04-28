@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out -r https://x-access-token:$GITHUB_TOKEN@github.com/<username>/<repo>.git",
     "build-and-deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
